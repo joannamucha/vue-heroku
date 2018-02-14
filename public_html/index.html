@@ -8,12 +8,12 @@
 <main id="app">
 		
 
-<h1>Beer brands</h1>
-<ul>
-  <li v-for="item in beers">
-    {{ item.name }}
-  </li>
-</ul>
+<h1>I &#9825 Beers</h1>
+<article v-for="item in beers">
+<h2><a :href="item.url">{{ item.name }}</a></h2>
+<p>{{ item.description }}</p>
+<img :src="item.image">
+</article>
 
 </main>
 <script type="text/javascript">
@@ -23,12 +23,18 @@ var example1 = new Vue({
   data: {
     beers: [
       { 
-      	name: 'Fortuna' 
+      	name: 			'Fortuna',
+      	url: 			'http://www.browarfortuna.pl/en/',
+      	description: 	'This beer’s extraordinary flavour is a combination of slightly bitter roasted malt balanced with a dose of surprising sweetness. .',
+      	image: 			'https://vignette.wikia.nocookie.net/beer/images/7/74/Fortuna_czarne2.jpg/revision/latest?cb=20150514215208' 
       },
       { 
-      	name: 'Bernard' 
+      	name: 			'Bernard',
+      	url: 			'https://www.bernard.cz/en/story/brewery.shtml',
+      	description: 	'Thanks to its traditional procedures, BERNARD beer is stands out for its harmony of fullness and bitterness.',
+      	image: 			'https://www.bernard.cz/img/edee/en/sortiment/full/01.jpg?v02' 
       },
-      
+
     ]
   }
 })</script>
