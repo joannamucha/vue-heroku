@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vue.js Example Page</title>
-	<script type="text/javascript" src="vue.js"></script>
+<meta charset="utf-8">
+<title>SoulPet</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css.map">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-<body>
-<main id="app">
-		
+<body class="bodyMain">
 
-<h1>I &#9825 Beers</h1>
-<article v-for="item in beers">
-<h2><a :href="item.url">{{ item.name }}</a></h2>
-<p>{{ item.description }}</p>
-<img :src="item.image">
-</article>
+  <header class="bodyMain-headerMainPage">
+  <!-- AUDIO EFFECTS -->
+    <audio autoplay>
+      <source src="audio/catpurr.mp3" type="audio/mp3">
+    </audio>
+    <!-- LOGO IMAGE -->
+<img class="bodyMain-headerMainPage-logoMain--center" src="img/logo2.png" alt="logo on main page"/>
+  </header>
 
-</main>
-<script type="text/javascript">
+  <main class="bodyMain-mainMainPage">
+    <!-- ENTER YOUR NAME - POP UP -->
+<section class="bodyMain-mainMainPage-sectionText--center">
+  <div class="bodyMain-mainMainPage-sectionText--center-paragraph--center">
+  <p id="demo"></p>
+  <!-- INTRUDOCTION TEXT -->
+  <p class="bodyMain-mainMainPage-sectionText--center-paragraph--center">This is a quiz to tell you which animal you should get as a life companion! <br>Answer these 5 questions and find out your destiny!</p>
+    </section>
 
-var example1 = new Vue({
-  el: '#app',
-  data: {
-    beers: [
-      { 
-      	name: 			'Fortuna',
-      	url: 			'http://www.browarfortuna.pl/en/',
-      	description: 	'This beer’s extraordinary flavour is a combination of slightly bitter roasted malt balanced with a dose of surprising sweetness. .',
-      	image: 			'https://vignette.wikia.nocookie.net/beer/images/7/74/Fortuna_czarne2.jpg/revision/latest?cb=20150514215208' 
-      },
-      { 
-      	name: 			'Bernard',
-      	url: 			'https://www.bernard.cz/en/story/brewery.shtml',
-      	description: 	'Thanks to its traditional procedures, BERNARD beer is stands out for its harmony of fullness and bitterness.',
-      	image: 			'https://www.bernard.cz/img/edee/en/sortiment/full/01.jpg?v02' 
-      },
+<!-- START BUTTON -->
+<section class="bodyMain-mainMainPage-sectionButton--center">
+  <button id="startbutton" class="bodyMain-mainMainPage-sectionButton--center-startButton-center">Start</button>
+</section>
 
-    ]
-  }
-})</script>
+  </main>
+
+<script src="js/vue.min.js"></script>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="js/javascript.js"></script>
+<script src="js/javascriptIndexPage.js"></script>
+
+</script>
 </body>
 </html>
